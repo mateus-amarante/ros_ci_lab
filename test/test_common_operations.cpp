@@ -9,10 +9,10 @@ using ros_ci_lab::Point2D;
 TEST(TestFactorial, FactorialBasics) {
   EXPECT_EQ(1, ros_ci_lab::factorial(0));
   EXPECT_EQ(1, ros_ci_lab::factorial(1));
-  EXPECT_EQ(2, ros_ci_lab::factorial(1));
-  EXPECT_EQ(6, ros_ci_lab::factorial(1));
-  EXPECT_EQ(24, ros_ci_lab::factorial(1));
-  EXPECT_EQ(24*5, ros_ci_lab::factorial(1));
+  EXPECT_EQ(2, ros_ci_lab::factorial(2));
+  EXPECT_EQ(6, ros_ci_lab::factorial(3));
+  EXPECT_EQ(24, ros_ci_lab::factorial(4));
+  EXPECT_EQ(24 * 5, ros_ci_lab::factorial(5));
 }
 
 TEST(TestPoint2DClass, ConstructorAndGetters) {
@@ -22,11 +22,11 @@ TEST(TestPoint2DClass, ConstructorAndGetters) {
   EXPECT_DOUBLE_EQ(0., default_point.x());
   EXPECT_DOUBLE_EQ(0., default_point.y());
 
-  EXPECT_DOUBLE_EQ(-1., default_point.x());
-  EXPECT_DOUBLE_EQ(0., default_point.y());
+  EXPECT_DOUBLE_EQ(-1., point_x.x());
+  EXPECT_DOUBLE_EQ(0., point_x.y());
 
-  EXPECT_DOUBLE_EQ(2., default_point.x());
-  EXPECT_DOUBLE_EQ(-3., default_point.y());
+  EXPECT_DOUBLE_EQ(2., point_xy.x());
+  EXPECT_DOUBLE_EQ(-3., point_xy.y());
 }
 
 TEST(TestPoint2DClass, Setters) {
